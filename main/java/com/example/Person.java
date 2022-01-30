@@ -54,8 +54,8 @@ public class Person {
         result.forEach((key, value) -> {
             tempList.add(value);
         });
-        // int selfrank = random.nextInt(mateList.size());
-        for (int i = 0; i < 5; i++) {
+        int selfrank = random.nextInt(mateList.size());
+        for (int i = 0; i < selfrank; i++) {
             Person temp = mateList.search(new Person(tempList.get(i)), (new Person(tempList.get(i))).NAME_ORDER);
             Preference pre = new Preference(i, temp);
             truePreference.addLast(pre);
